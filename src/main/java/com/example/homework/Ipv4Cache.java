@@ -1,6 +1,5 @@
 package com.example.homework;
 
-import com.example.homework.config.PacketDto;
 import org.pcap4j.packet.IpV4Packet;
 
 import org.pcap4j.packet.TcpPacket;

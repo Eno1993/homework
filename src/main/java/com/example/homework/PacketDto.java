@@ -1,4 +1,4 @@
-package com.example.homework.config;
+package com.example.homework;
 
 import lombok.NoArgsConstructor;
 import org.pcap4j.packet.IpV4Packet;
