@@ -36,10 +36,9 @@ public class Ipv4Cache {
                     tcpHeader.getSrcPort().toString(),
                     tcpHeader.getDstPort().toString());
 
-            Optional<PacketDto.PacketData> gatheredPacket =
-                    fragmentMap.computeIfAbsent(key, value -> new PacketDto.PacketFragment()).update(ipV4Packet);
+            fragmentMap.computeIfAbsent(key, value -> new PacketDto.PacketFragment()).update(ipV4Packet);
 
-            gatheredPacket.ifPresent(packet -> {
+            fragmentMap.get(key).gatherPacket().ifPresent(packet -> {
                 ipV4PacketQueue.offer(packet);
                 fragmentMap.remove(key);
             });
