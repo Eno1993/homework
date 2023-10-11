@@ -26,6 +26,10 @@ dependencies {
 	//pcap4j
 	implementation 'org.pcap4j:pcap4j-core:1.8.2'
 
+	//File 입 출력 라이브러리
+	implementation 'commons-io:commons-io:2.6'
+	implementation 'commons-fileupload:commons-fileupload:1.4'
+
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
