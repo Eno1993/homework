@@ -6,6 +6,7 @@ import org.pcap4j.packet.TcpPacket;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
 
 @Component
 public class Ipv4Cache {
@@ -57,6 +58,7 @@ public class Ipv4Cache {
     public String getHashCode(String ... inputs){
         return String.join("", inputs);
     }
+
 
 
 

@@ -38,9 +38,7 @@ public class PacketDto {
 
             short offSet = ipV4Packet.getHeader().getFragmentOffset();
             fragmentMap.put(offSet, true);
-            if(offSet==0){
-                this.ipV4Packet = ipV4Packet;
-            }
+            this.ipV4Packet = offSet==0 ? ipV4Packet : this.ipV4Packet;
 
             if(ipV4Packet.getHeader().getMoreFragmentFlag()){
                 int nextOffSet = ipV4Packet.getHeader().getTotalLengthAsInt()-ipV4Packet.getHeader().getIhl();
